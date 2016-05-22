@@ -55,8 +55,7 @@ takePicture = function(argCallBack) {
   camera.on("read", function( err, timestamp, filename ){
     // The read event is fired multiple times - for temporary saved pictures
     // where the fielname contains "~" - we're not interested in these.
-    if(filename.indexOf("~") === -1)
-    {
+    if(filename.indexOf("~") === -1) {
       // the read event is fired for temporary pictures - we're not interested in this.
       console.log("photo image captured with filename: " + filename );
       // If we don't explicitly stop after this then we run into problems with more
